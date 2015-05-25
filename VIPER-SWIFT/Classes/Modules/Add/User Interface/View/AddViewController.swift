@@ -12,7 +12,7 @@ import UIKit
 class AddViewController: UIViewController, UITextFieldDelegate, AddViewInterface {
     var eventHandler : AddModuleInterface?
 
-    @IBOutlet var nameTextField : UITextField
+    @IBOutlet var nameTextField : UITextField!
     @IBOutlet var datePicker : UIDatePicker?
     
     var minimumDate : NSDate = NSDate()
@@ -53,7 +53,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, AddViewInterface
     }
     
     func setEntryName(name: NSString) {
-        nameTextField.text = name
+        nameTextField.text = name as String
     }
     
     func setEntryDueDate(date: NSDate) {
@@ -70,7 +70,7 @@ class AddViewController: UIViewController, UITextFieldDelegate, AddViewInterface
         }
     }
     
-    func textFieldShouldReturn(textField: UITextField!) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         
         return true
