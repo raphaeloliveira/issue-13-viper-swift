@@ -14,5 +14,6 @@ profile
 *.moved-aside
 DerivedData
 .idea/
+*.xccheckout
 
 /Build
